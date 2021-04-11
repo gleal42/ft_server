@@ -12,7 +12,7 @@ In this project we are asked to setup a Nginx webserver inside a single Docker c
 
 A great explanation of each of these features were given by [Ji Woo Lee](https://velog.io/@ljiwoo59/ftserver#wordpress)
 
-##Understanding Docker
+## Understanding Docker
 
 For this project I recommend first following a [Docker tutorial](https://www.youtube.com/watch?v=fqMOX6JJhGo).
 This one was suggested by [Dimitri](https://github.com/DimitriDaSilva) and it is a great overview (from instalation to images, containers, ports... basically everything you need to know. Don't forget to do their Docker Labs Exercises to get comfortable with Docker).
