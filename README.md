@@ -12,6 +12,7 @@ In this project we are asked to setup a Nginx webserver inside a single Docker c
 
 A great explanation of each of these features were given by [Ji Woo Lee](https://velog.io/@ljiwoo59/ftserver#wordpress)
 
+
 ## Understanding Docker
 
 For this project I recommend first following a [Docker tutorial](https://www.youtube.com/watch?v=fqMOX6JJhGo).
@@ -36,6 +37,7 @@ This one was suggested by [Dimitri](https://github.com/DimitriDaSilva) and it is
 - So we just need to follow this logic for all the software components we're using.
   - To deploy our server we need Debian:Buster Operating system, Nginx Web server, and we need relatively recent mySQL and PHP versions in order to be compatible with the current Wordpress requirements.
 
+
 ## - Implementation
 
 To better understand each component we're installing this is the roadmap I suggest following:
@@ -48,6 +50,7 @@ To better understand each component we're installing this is the roadmap I sugge
 6. Install phpMyAdmin (which is also a PHP page connected to our databases)
 7. Install Wordpress
 8. Create 2 different config files one with autoindex on and other with autoindexoff and a sh file to switch between them.
+
 
 ### The best resources for the implementation were:
 
@@ -76,6 +79,8 @@ https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
 ### Nginx:
 
+As a reverse-proxy what Nginx will do is receive requests from the internet (in our case when we write localhost on the search bar) and it will redirect that request to our internal server (in our case if someone writes localhost it will redirect the connection to a secure https connection on port 403 and show the files on the directory we specify (in my case var/www/html/)).
+
 ##### Configuration
 https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d034940
 https://github.com/satellitewp/rocket-nginx/wiki/Nginx-configuration-for-WordPress
@@ -97,11 +102,23 @@ https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-on-debian-10#step-5-%E2%80%94-testing-encryption
 https://linuxize.com/post/creating-a-self-signed-ssl-certificate/
 
+Once we go through these resources this is what we should see:
+
+(PLACE IMAGE HERE)
+
+Or you can also remove this default index file `var/www/html/index.nginx-debian.html` and replace it with your own:
+
+(PLACE IMAGE HERE)
+
 ### MariaDB/PHP Installation (Overview):
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-debian-10
 https://www.tecmint.com/install-lemp-on-debian-10-server/
 
 #### MariaDB
+
+Software that stores data tables (think of Excel).
+phpMyAdmin - Will allow us to access all the tables inside MariaDB database system.
+Wordpress - Everytime we create a Wordpress page multiple tables will be created inside MariaDB to store data such as the username, password and website name.
 
 https://varhanik.net/restart-stop-start-mysql/
 https://rtfm.co.ua/en/mysql-mariadb-most-used-commands-with-examples/
@@ -117,7 +134,17 @@ Here document
 https://bash.cyberciti.biz/guide/Here_documents
 https://github.com/elianrc/ft_server
 
+After following these resources you should see a table you have created on mySQL:
+
+On the terminal:
+(PLACE IMAGE HERE)
+On your localhost:
+(PLACE IMAGE HERE)
+
 ### phpMyAdmin
+Web application to manage databases. 
+Interface that allows us to see, manipulate and export the data in our MariaDB databases.
+
 https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10
 
 ### Wordpress
@@ -127,6 +154,8 @@ https://www.youtube.com/watch?v=kIqWxjDj4IU
 https://www.youtube.com/watch?v=ZdcZDmJeq4k
 https://wordpress.org/support/article/how-to-install-wordpress/
 https://wordpress.org/support/article/editing-wp-config-php/
+
+
 
 ### OTHER
 https://askubuntu.com/questions/179955/var-lib-apt-lists-is-huge
