@@ -164,7 +164,7 @@ https://wordpress.org/support/article/editing-wp-config-php/
 ![First Page Wordpress](images/wordpress_first_page.png)
 ![Wordpress Login Page](images/wordpress_login.png)
 ![Wordpress Website Setup Page](images/wordpress_website_setup.png)
-![Wordpress Dashboard](images/images/wordpress_dashboard.png)
+![Wordpress Dashboard](images/wordpress_dashboard.png)
 
 ### OTHER
 https://askubuntu.com/questions/179955/var-lib-apt-lists-is-huge
