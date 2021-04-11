@@ -110,7 +110,7 @@ Once we go through these resources this is what we should see:
 
 Or you can also remove this default index file `var/www/html/index.nginx-debian.html` and replace it with your own:
 
-![My Homepage](images/homepage.png)
+![My Homepage](images/Homepage.png)
 
 
 
@@ -161,10 +161,10 @@ https://www.youtube.com/watch?v=ZdcZDmJeq4k
 https://wordpress.org/support/article/how-to-install-wordpress/
 https://wordpress.org/support/article/editing-wp-config-php/
 
-![](images/wordpress_first_page.png)
-![](images/wordpress_login.png)
-![](images/wordpress_website_setup.png)
-![](images/images/wordpress_dashboard.png)
+![First Page Wordpress](images/wordpress_first_page.png)
+![Wordpress Login Page](images/wordpress_login.png)
+![Wordpress Website Setup Page](images/wordpress_website_setup.png)
+![Wordpress Dashboard](images/images/wordpress_dashboard.png)
 
 ### OTHER
 https://askubuntu.com/questions/179955/var-lib-apt-lists-is-huge
