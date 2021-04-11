@@ -104,11 +104,15 @@ https://linuxize.com/post/creating-a-self-signed-ssl-certificate/
 
 Once we go through these resources this is what we should see:
 
-(PLACE IMAGE HERE)
+![Nginx Default Index html page](images/nginx_default_index_html_page.png)
+
+
 
 Or you can also remove this default index file `var/www/html/index.nginx-debian.html` and replace it with your own:
 
-(PLACE IMAGE HERE)
+![My Homepage](images/homepage.png)
+
+
 
 ### MariaDB/PHP Installation (Overview):
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-debian-10
@@ -137,9 +141,11 @@ https://github.com/elianrc/ft_server
 After following these resources you should see a table you have created on mySQL:
 
 On the terminal:
-(PLACE IMAGE HERE)
+
+![Sample Data Table](images/sample_data_table.png)
+
 On your localhost:
-(PLACE IMAGE HERE)
+![PHP file connected to MariaDB Data Table](images/php_file_connected_to_mariadb_data_table.png)
 
 ### phpMyAdmin
 Web application to manage databases. 
@@ -155,7 +161,10 @@ https://www.youtube.com/watch?v=ZdcZDmJeq4k
 https://wordpress.org/support/article/how-to-install-wordpress/
 https://wordpress.org/support/article/editing-wp-config-php/
 
-
+![](images/wordpress_first_page.png)
+![](images/wordpress_login.png)
+![](images/wordpress_website_setup.png)
+![](images/images/wordpress_dashboard.png)
 
 ### OTHER
 https://askubuntu.com/questions/179955/var-lib-apt-lists-is-huge
