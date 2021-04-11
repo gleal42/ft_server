@@ -6,12 +6,15 @@
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 00:26:43 by gleal             #+#    #+#              #
-#    Updated: 2021/04/08 22:25:32 by gleal            ###   ########.fr        #
+#    Updated: 2021/04/11 00:03:42 by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
+
+cp /tmp/server_index_on.conf /etc/nginx/sites-available/server.conf
+ln -s /etc/nginx/sites-available/server.conf /etc/nginx/sites-enabled/server.conf
 
 mkdir /etc/nginx/ssl
 openssl req -newkey rsa:4096 \

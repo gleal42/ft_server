@@ -6,7 +6,7 @@
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/05 23:24:47 by gleal             #+#    #+#              #
-#    Updated: 2021/04/09 20:25:41 by gleal            ###   ########.fr        #
+#    Updated: 2021/04/11 00:07:05 by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ RUN wget https://wordpress.org/latest.tar.gz && \
 	mv wordpress var/www/html && \
 	rm -rf latest.tar.gz
 
-COPY /srcs/nginx/server.conf /etc/nginx/sites-available/server.conf
-RUN ln -s /etc/nginx/sites-available/server.conf /etc/nginx/sites-enabled/server.conf
+COPY /srcs/nginx/server_index_on.conf /tmp/server_index_on.conf
+COPY /srcs/nginx/server_index_off.conf /tmp/server_index_off.conf
 
 RUN rm -rf /etc/nginx/sites-enabled/default
 RUN rm -f var/www/html/index.nginx-debian.html

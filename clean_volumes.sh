@@ -12,4 +12,5 @@
 
 docker rm $(docker container ls -qa)
 docker rmi $(docker images -q -a )
+docker volume rm $(docker volume ls -q)
 #docker system prune --force
