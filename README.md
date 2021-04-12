@@ -3,6 +3,7 @@
 In this project we are asked to setup a Nginx webserver inside a single Docker container.
 
 ## Features
+
 - Built on top of **Linux Debian:buster** (latest version at the moment)
 - Ability to store backend data in **MySQL database**
 - **phpMyAdmin** database administrator
@@ -18,11 +19,13 @@ A great explanation of each of these features were given by [Ji Woo Lee](https:/
 For this project I recommend first following a [Docker tutorial](https://www.youtube.com/watch?v=fqMOX6JJhGo).
 This one was suggested by [Dimitri](https://github.com/DimitriDaSilva) and it is a great overview (from instalation to images, containers, ports... basically everything you need to know. Don't forget to do their Docker Labs Exercises to get comfortable with Docker).
 
+
 ### After watching that tutorial, the main takeaways that I got were:
 
 - Applications are complex. They need different pieces of software for their different features (example Nginx for the server, Mariadb for the mysql databases, PHP 7.3 to read the .php files).
 - These pieces of software can have different versions that need to be compatible among each other.
 - Not only that but different operating systems have different native commands and compatibility needs.
+
 
 ### - How does Docker help with these issues:
 
@@ -42,7 +45,7 @@ This one was suggested by [Dimitri](https://github.com/DimitriDaSilva) and it is
 
 To better understand each component we're installing this is the roadmap I suggest following:
 
-1. Install Nginx
+1. Install Nginx with SSL/https
 2. Try replacing the default Nginx webpage
 3. Install MariaDB - Create and Show a database
 4. Install PHP - Show PHP info page
@@ -71,11 +74,22 @@ https://github.com/DimitriDaSilva/42Lisbon_lvl_02_ft_server - Great implementati
 https://github.com/rchallie/ft_server/blob/master/Dockerfile
 https://github.com/solaldunckel/ft_server
 
+
 ## Non-github resources:
 
 ### Build a Dockerfile
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 
+### Autoindex on:
+
+I have my html and php files(phpMyAdmin, Wordpress and all the other test files) stored in a location inside the container(var/www/html/) in different directories:
+> var/www/html/homepage/homepage.html
+> var/www/html/php_my_admin/(phpmyadmin files)
+> var/www/html/wordpress/(wordpress files)
+>...
+
+Having autoindex on allows us to see a folder tree diagram of all the files in that location:
+![Auto Index on](images/autoindex-on.png)
 
 ### Nginx:
 
@@ -145,13 +159,18 @@ On the terminal:
 ![Sample Data Table](images/sample_data_table.png)
 
 On your localhost:
+
 ![PHP file connected to MariaDB Data Table](images/php_file_connected_to_mariadb_data_table.png)
 
 ### phpMyAdmin
+
 Web application to manage databases. 
 Interface that allows us to see, manipulate and export the data in our MariaDB databases.
 
 https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10
+
+![phpMyAdmin Login](images/phpmyadmin_login.png)
+![phpMyAdmin Dashboard](images/phpmyadmin_dashboard.png)
 
 ### Wordpress
 
@@ -167,6 +186,7 @@ https://wordpress.org/support/article/editing-wp-config-php/
 ![Wordpress Dashboard](images/wordpress_dashboard.png)
 
 ### OTHER
+
 https://askubuntu.com/questions/179955/var-lib-apt-lists-is-huge
 
 Persisting data in Wordpress (if you remove a container and run it again your websites won't be destroyed)
