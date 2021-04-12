@@ -93,6 +93,7 @@ I have my html and php files(phpMyAdmin, Wordpress and all the other test files)
 - ...
 
 Having autoindex on allows us to see a folder tree diagram of all the files in that location:
+
 ![Auto Index on](images/autoindex-on.png)
 
 https://stackoverflow.com/questions/50768439/nginx-403-error-with-autoindex
@@ -176,6 +177,7 @@ Interface that allows us to see, manipulate and export the data in our MariaDB d
 https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10
 
 ![phpMyAdmin Login](images/phpmyadmin_login.png)
+
 ![phpMyAdmin Dashboard](images/phpmyadmin_dashboard.png)
 
 ### Wordpress
@@ -187,8 +189,11 @@ https://wordpress.org/support/article/how-to-install-wordpress/
 https://wordpress.org/support/article/editing-wp-config-php/
 
 ![First Page Wordpress](images/wordpress_first_page.png)
+
 ![Wordpress Login Page](images/wordpress_login.png)
+
 ![Wordpress Website Setup Page](images/wordpress_website_setup.png)
+
 ![Wordpress Dashboard](images/wordpress_dashboard.png)
 
 ### OTHER
