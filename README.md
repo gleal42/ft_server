@@ -2,7 +2,7 @@
 
 In this project we are asked to setup a Nginx webserver inside a single Docker container.
 
-## Features
+## Features of our Server
 
 - Built on top of **Linux Debian:buster** (latest version at the moment)
 - Ability to store backend data in **MySQL database**
@@ -17,6 +17,7 @@ A great explanation of each of these features were given by [Ji Woo Lee](https:/
 ## Understanding Docker
 
 For this project I recommend first following a [Docker tutorial](https://www.youtube.com/watch?v=fqMOX6JJhGo).
+
 This one was suggested by [Dimitri](https://github.com/DimitriDaSilva) and it is a great overview (from instalation to images, containers, ports... basically everything you need to know. Don't forget to do their Docker Labs Exercises to get comfortable with Docker).
 
 
@@ -63,19 +64,22 @@ It gives a great glimpse of where the different files are distributed once we st
 - [Part 1](https://forhjy.medium.com/how-to-install-lemp-wordpress-on-debian-buster-by-using-dockerfile-1-75ddf3ede861)
 - [Part 2](https://forhjy.medium.com/42-ft-server-how-to-install-lemp-wordpress-on-debian-buster-by-using-dockerfile-2-4042adb2ab2c)
 
-#### And for the best implementation roadmap:
+#### A great implementation roadmap to better understand each component
 
 Viktoriia Varodi - [What I did step by step in her index](https://github.com/vvarodi/ft_server/wiki).
 
 #### Other great githubs:
 
 https://github.com/elianrc/ft_server - Especially impressed by the use of Here documents to input the commands inside the Mariadb databases!
+
 https://github.com/DimitriDaSilva/42Lisbon_lvl_02_ft_server - Great implementation with a lot of comments inside the code.
+
 https://github.com/rchallie/ft_server/blob/master/Dockerfile
+
 https://github.com/solaldunckel/ft_server
 
 
-## Non-github resources:
+## Non-github resources/Implementation:
 
 ### Build a Dockerfile
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
@@ -83,32 +87,34 @@ https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 ### Autoindex on:
 
 I have my html and php files(phpMyAdmin, Wordpress and all the other test files) stored in a location inside the container(var/www/html/) in different directories:
-> var/www/html/homepage/homepage.html
-> var/www/html/php_my_admin/(phpmyadmin files)
-> var/www/html/wordpress/(wordpress files)
->...
+- var/www/html/homepage/homepage.html
+- var/www/html/php_my_admin/(phpmyadmin files)
+- var/www/html/wordpress/(wordpress files)
+- ...
 
 Having autoindex on allows us to see a folder tree diagram of all the files in that location:
 ![Auto Index on](images/autoindex-on.png)
+
+https://stackoverflow.com/questions/50768439/nginx-403-error-with-autoindex
 
 ### Nginx:
 
 As a reverse-proxy what Nginx will do is receive requests from the internet (in our case when we write localhost on the search bar) and it will redirect that request to our internal server (in our case if someone writes localhost it will redirect the connection to a secure https connection on port 403 and show the files on the directory we specify (in my case var/www/html/)).
 
-##### Configuration
+#### Configuration
 https://jgefroh.medium.com/a-guide-to-using-nginx-for-static-websites-d96a9d034940
 https://github.com/satellitewp/rocket-nginx/wiki/Nginx-configuration-for-WordPress
 
-##### Add html files to NGINX
+#### Add html files to NGINX
 https://www.youtube.com/watch?v=g4Qc_49o5-M
 
-##### Other doubts:
+#### Other doubts:
 https://stackoverflow.com/questions/18861300/how-to-run-nginx-within-a-docker-container-without-halting
 https://stackoverflow.com/questions/57561236/how-nginx-process-404-fallback-in-try-files
 https://stackoverflow.com/questions/50768439/nginx-403-error-with-autoindex
 https://stackoverflow.com/questions/10663248/how-to-configure-nginx-to-enable-kinda-file-browser-mode
 
-##### Great to understand NGINX locations:
+#### Great to understand NGINX locations:
 https://www.youtube.com/watch?v=hxngRDmHTM0
 https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/
 
