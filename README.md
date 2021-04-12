@@ -20,10 +20,10 @@ For a better clean up we should remove the "#" inside the clean_containers.sh fi
 But you may notice a problem. If you remove the container and restart it the website you have created is gone.
 
 If you want to use this to develop your website in Wordpress and keep all the plugins and websites installed permanently then run:
-`bash run_volume` this will create a copy of the plugin and website data on our computer (outside the container).
+`bash run_volume.sh` this will create a copy of the plugin and website data on our computer (outside the container).
 
 If you want to delete this information because you think it is taking up too much space just run (remember, this will delete your Wordpress created website):
-`bash clean_volumes`
+`bash clean_volumes.sh`
 
 ## Features of our Server
 
