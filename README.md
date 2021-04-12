@@ -2,6 +2,29 @@
 
 In this project we are asked to setup a Nginx webserver inside a single Docker container.
 
+If you have Docker installed on your computer you can just git clone, navigate to the Dockerfile directory inside terminal and type the following command:
+
+`bash run_containers.sh`
+
+It will run a script to create an image and run a container with that image.
+
+In that image we will specify that inside our container we install all the necessary softwae, with the necessary configurations in order to have our server working.
+
+After we run that script we can simply go to the browser, type localhost and we will see an Index with all the files we can access (Homepage, phpMyAdmin, Wordpress and other files I created to test the different components.
+
+Once we're done we can clean the container typing:
+`bash clean_containers.sh`
+
+For a better clean up we should remove the "#" inside the clean_containers.sh file.
+
+But you may notice a problem. If you remove the container and restart it the website you have created is gone.
+
+If you want to use this to develop your website in Wordpress and keep all the plugins and websites installed permanently then run:
+`bash run_volume` this will create a copy of the plugin and website data on our computer (outside the container).
+
+If you want to delete this information because you think it is taking up too much space just run (remember, this will delete your Wordpress created website):
+`bash clean_volumes`
+
 ## Features of our Server
 
 - Built on top of **Linux Debian:buster** (latest version at the moment)
