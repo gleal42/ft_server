@@ -25,7 +25,7 @@ If you want to use this to develop your website in Wordpress and keep all the pl
 If you want to delete this information because you think it is taking up too much space just run (remember, this will delete your Wordpress created website):
 `bash clean_volumes.sh`
 
-## Features of our Server
+### Features of our Server
 
 - Built on top of **Linux Debian:buster** (latest version at the moment)
 - Ability to store backend data in **MySQL database**
