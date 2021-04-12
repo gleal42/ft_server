@@ -66,7 +66,7 @@ It gives a great glimpse of where the different files are distributed once we st
 
 #### A great implementation roadmap to better understand each component
 
-Viktoriia Varodi - [What I did step by step in her index](https://github.com/vvarodi/ft_server/wiki).
+Viktoriia Varodi - ["What I did step by step in her index"](https://github.com/vvarodi/ft_server/wiki).
 
 #### Other great githubs:
 
